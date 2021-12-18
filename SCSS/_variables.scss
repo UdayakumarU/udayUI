@@ -1,0 +1,32 @@
+$primary-color: #7b1fa2;
+$accent-color:#ffdc68;
+$success-color: #2e7d32;
+$error-color: #f5414f;
+$warning-color: #ffa114;
+
+//shades
+$black: #1d1d21;
+$gray-10: #2e2e31;
+$gray-6: #7b7a7d;
+$gray-4: #a5a5a6;
+$gray-3: #bbbbbc;
+$gray-2: #d1d0d2;
+$gray-1: #e8e7e8;
+$white: #fff;
+
+$colors: (
+    "primary": $primary-color,
+    "accent": $accent-color,
+    "success": $success-color,
+    "error": $error-color,
+    "warning": $warning-color
+);
+
+//font
+$font-weights: (
+    "regular":400,
+    "medium":500,
+    "bold":700
+);
+
+$font-stack : Arial, Helvetica, sans-serif;
