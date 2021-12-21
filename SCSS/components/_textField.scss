@@ -4,7 +4,7 @@
     margin: 8px;
     height: 40px;
 
-    .label{
+    label{
         position: absolute;
         bottom: 10px;
         color: $gray-8;
@@ -30,7 +30,7 @@
         &:focus{
             border-bottom: 2px solid $primary-color;
             
-            &+.label{
+            &+label{
                 color: $primary-color;
                 transform: translateY(-20px);
                 font-size: 12px;
