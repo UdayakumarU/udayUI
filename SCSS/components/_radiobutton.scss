@@ -1,0 +1,25 @@
+%check-core{
+    margin-right: 1rem;
+    position: relative;
+    & input[type="radio"]{
+        cursor: pointer;
+        width: 1.15rem;
+        height: 1.15rem;
+        position: relative;
+        top:0.23em;
+    }
+    & label{
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+    }
+}
+
+.check-wrap{
+    @extend %check-core;
+}
+
+.check-wrap-inline {
+    display: inline-block;
+    @extend %check-core;
+}
