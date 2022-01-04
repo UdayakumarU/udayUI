@@ -1,0 +1,39 @@
+/*
+Baglog:
+ 1.shadow effect on scroll down
+*/
+
+.navbar{
+    padding: 1rem 0.8rem;
+    z-index: 10;
+}
+
+.navbar-main{
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    flex-wrap: wrap; // allow us to do the line break for collapsing content
+    align-items: center;
+    justify-content: space-between; // space out brand from logo
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+
+.navbar-items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.navbar-gradient{
+    background: $primary-gradient;
+}
+
+.bar-dark{
+    background-color: $dark
+}
+
+.shadow{
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 1);;
+    padding : 10em;
+    margin: 10em;
+}
