@@ -1,4 +1,6 @@
-$primary-color: #7b1fa2;
+$primary-gradient: linear-gradient(15deg, #280116 0 10%, #490229 20%,  #810648 60%, #B90064 100%);
+
+$primary-color: #810648;
 $accent-color:#ffdc68;
 $success-color: #2e7d32;
 $error-color: #f5414f;
@@ -6,6 +8,7 @@ $warning-color: #ffa114;
 
 //shades
 $black: #1d1d21;
+$dark: #202020;
 $gray-10: #2e2e31;
 $gray-8: #7b7a7d;
 $gray-6: #a5a5a6;
@@ -25,8 +28,12 @@ $colors: (
 //font
 $font-weights: (
     "regular":400,
-    "medium":500,
+    "medium":550,
     "bold":700
 );
 
+$positions:('top','bottom','right','left');
+
 $font-stack : Arial, Helvetica, sans-serif;
+
+$default-sidebar-width: 60px;

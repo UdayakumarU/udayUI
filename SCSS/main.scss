@@ -1,9 +1,9 @@
 @import './variables';
 @import './utilities';
+@import './tagReboot';
 @import './components/button';
 @import './components/textField';
 @import './components/radiobutton';
-
-*{
-    font-family: $font-stack;
-}
+@import './components/navbar';
+@import './components/sidebar';
+@import './components/grid';

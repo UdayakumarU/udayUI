@@ -5,3 +5,14 @@
 @function color($color-name){
     @return map-get($colors, $color-name);
 }
+
+.small{
+    font-size: 0.75rem;
+}
+
+@each $position in $positions{
+    .sticky-#{$position}{
+        position: sticky;
+        #{$position}: 0;
+    }
+}
