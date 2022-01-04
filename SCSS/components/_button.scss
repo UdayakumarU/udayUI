@@ -1,4 +1,4 @@
-$buttons:('primary', 'accent', 'success', 'error', 'warning');
+$buttons:('primary');
 
 @function set-text-color($color){
     @if(lightness($color)>70){
@@ -30,6 +30,22 @@ $buttons:('primary', 'accent', 'success', 'error', 'warning');
     @include elevation-active;
 }
 
+@mixin hover-outline($color) {
+    &:hover{
+        border: 2px solid $color;
+        background: set-background-color($color);
+        color: set-text-color($color);
+        transition: all 0.2s linear;
+    }
+}
+
+@mixin hover($color) {
+    &:hover{
+        color: $color;
+        transition: all 0.2s linear;
+    }
+}
+
 @mixin solid($color) {
     @extend %btn;
     color: set-text-color($color);
@@ -41,13 +57,18 @@ $buttons:('primary', 'accent', 'success', 'error', 'warning');
     @extend %btn;
     color: $color;
     background: transparent;
-    border: 1px solid $color;
-    &:hover{
-        color: set-text-color($color);
-        background: set-background-color($color);
-        transition: all 0.2s linear;
-    }
-    @include elevation-active;;
+    border: 2px solid $color;
+    @include hover-outline($color);
+    @include elevation-active;
+}
+
+@mixin outline-light($outline-color, $hover-color) {
+    @extend %btn;
+    background: transparent;
+    color: $outline-color;
+    border: 2px solid $outline-color;
+    @include hover-outline(lighten($hover-color, 50%));
+    @include elevation-active;
 }
 
 %btn{
@@ -59,19 +80,36 @@ $buttons:('primary', 'accent', 'success', 'error', 'warning');
     vertical-align: middle;
     
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
     font-weight: weight(medium);
-    font-size: 1rem;
     letter-spacing: 0.02857em;
     line-height: 1.75;
     margin: 0.5em;
     min-width: 64px;
-    padding: 6px 16px;
+    padding: 2px 12px;
     text-transform: capitalize;
+}
+
+.btn-icon {
+    @extend %btn;
+    color: $white;
+    .icon-left{
+        float:left;
+    }
+    .icon-right{
+        float:right;
+    }
+}
+
+.link-light{
+    color: $white;
+    text-decoration: none;
+    @include hover(lighten($primary-color, 50%));
 }
 
 @each $button in $buttons{
     .btn-#{$button}{ @include solid(color($button)); }
+    .btn-#{$button}-outline-light{ @include outline-light($white, color($button)); }
     .btn-#{$button}-outline{ @include outline(color($button)); }
 }
