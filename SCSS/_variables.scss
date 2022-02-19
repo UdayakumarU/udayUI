@@ -37,3 +37,15 @@ $positions:('top','bottom','right','left');
 $font-stack : Arial, Helvetica, sans-serif;
 
 $default-sidebar-width: 60px;
+
+
+//common padding and border and more
+$border-width: 1px !default;
+$border-radius: .25rem !default;
+
+
+//cards
+$card-bg: $white !default;
+$card-border-width: $border-width !default;
+$card-border-color: rgba($black, .125) !default;
+$card-border-radius: $border-radius !default;
